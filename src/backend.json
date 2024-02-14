@@ -1,11 +1,24 @@
 {
-  "LzD0tXer5RS4oNHww8wjscTN1VQ2": {
-    "image": "http://res.cloudinary.com/thunkablecloudinary123/image/upload/v1707884797/uhrpqiiourepigkisfbc.jpg",
-    "name": "Aaron L"
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "LzD0tXer5RS4oNHww8wjscTN1VQ2": {
+      "type": "object",
+      "properties": {
+        "image": {"type": "string", "format": "uri"},
+        "name": {"type": "string"}
+      },
+      "required": ["image", "name"]
+    },
+    "highScore": {"type": "integer"},
+    "kwlJUNYtdlYFwVC4yeTVaqcgvt92": {
+      "type": "object",
+      "properties": {
+        "image": {"type": "string", "format": "uri"},
+        "name": {"type": "string"}
+      },
+      "required": ["image", "name"]
+    }
   },
-  "highScore": 6142005,
-  "kwlJUNYtdlYFwVC4yeTVaqcgvt92": {
-    "image": "http://res.cloudinary.com/thunkablecloudinary123/image/upload/v1707885292/r4vi4lauaodv6t8ghm0c.jpg",
-    "name": "Aaron L 2"
-  }
+  "required": ["LzD0tXer5RS4oNHww8wjscTN1VQ2", "highScore", "kwlJUNYtdlYFwVC4yeTVaqcgvt92"]
 }
