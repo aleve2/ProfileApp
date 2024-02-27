@@ -1,0 +1,14 @@
+When 'Sign out' button is clicked:
+  Perform Firebase sign out
+  If there is an error:
+    Set 'Error Label's Text to the error message
+  Else:
+    Navigate to 'Sign up screen'
+
+
+When 'Reset' button is clicked:
+  Perform Firebase reset password using 'app variable session email'
+  If there is an error:
+    Set 'Error Label's Text to the error message
+  Else:
+    Set 'Error Label's Text to "A password reset email has been sent to [app variable session email]"

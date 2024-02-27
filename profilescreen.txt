@@ -1,0 +1,27 @@
+When 'take photo' button is clicked:
+  Take a photo from the camera
+  If the action was not cancelled:
+    If there is an error:
+      Set 'Profile Screen Error Label's Text to the error message
+    Else:
+      Upload the photo
+      If there is an error during the upload:
+        Set 'Profile Screen Error Label's Text to the upload error message
+      Else:
+        Set a cloud variable with the key being a combination of the 'app variable user ID' and "/image" to the URL of the uploaded photo
+        Set 'Image1's Picture to the URL of the uploaded photo
+        Set 'Image Group's Visible property to false
+
+When 'photo from library' button is clicked:
+  Select a photo from the photo library
+  If the selection was not cancelled:
+    If there is an error:
+      Set 'Profile Screen Error Label's Text to the error message
+    Else:
+      Upload the selected photo
+      If there is an error during the upload:
+        Set 'Profile Screen Error Label's Text to the upload error message
+      Else:
+        Set a cloud variable with the key being a combination of 'app variable user ID' and "/image" to the URL of the uploaded photo
+        Set 'Image1's Picture to the URL of the uploaded photo
+        Set 'Image Group's Visible property to false

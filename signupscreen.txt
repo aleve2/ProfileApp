@@ -1,0 +1,32 @@
+Function SignUp:
+  If Password_TI_1's Text is not equal to Password_TI_2's Text:
+    Set ErrorLabel's Text to "Passwords must match!"
+  Else:
+    Attempt Firebase SignUp with Email_TI's Text and Password_TI_1's Text
+    If error occurred during Firebase SignUp:
+      Set ErrorLabel's Text to error message
+    Else:
+      Set ErrorLabel's Text to "Please check your email to complete signing up."
+      If Switch1's value is true:
+        Store Email_TI's Text in stored variable email
+        Store Password_TI_1's Text in stored variable password
+      Else:
+        Set stored variable email to null
+        Set stored variable password to null
+
+Function SignIn:
+  Attempt Firebase SignIn with Email_TI's Text and Password_TI_1's Text
+  If there is an error:
+    Set ErrorLabel's Text to the error message
+  Else if the email is not verified:
+    Set ErrorLabel's Text to "Please verify your email."
+  Else:
+    If Switch1's value is true:
+      Store Email_TI's Text in stored variable email
+      Store Password_TI_1's Text in stored variable password
+    Else:
+      Set stored variable email to null
+      Set stored variable password to null
+    Set app variable session email to Email_TI's Text
+    Set app variable user ID to the user id received from Firebase
+    Navigate to Profile Screen
